@@ -15,7 +15,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors("https://apohealthfrontend-az3supp4y-shubhams-projects-77fce6c4.vercel.app/login"));
 
 // api endpoints
 app.use("/api/user", userRouter)
