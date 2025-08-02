@@ -15,15 +15,15 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors("https://apohealthfrontend.vercel.app/",
-             "https://apohealthadmin.vercel.app/"));
+app.use(cors("https://apohealthfrontend.vercel.app",
+             "https://apohealthadmin.vercel.app"));
 app.use(cors({
   origin: function (origin, callback) {
     const allowedOrigins = [
       // "http://localhost:5173",
       // "http://localhost:4173",
-      "https://apohealthfrontend.vercel.app/",
-      "https://apohealthadmin.vercel.app/"
+      "https://apohealthfrontend.vercel.app",
+      "https://apohealthadmin.vercel.app"
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
