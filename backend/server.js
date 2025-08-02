@@ -1,8 +1,8 @@
 import express from "express"
 import cors from 'cors'
 import 'dotenv/config'
-import connectDB from "./config/mongodb.js"
-import connectCloudinary from "./config/cloudinary.js"
+import connectDB from "./Config/mongodb.js"
+import connectCloudinary from "./Config/cloudinary.js"
 import userRouter from "./routes/userRoute.js"
 import doctorRouter from "./routes/doctorRoute.js"
 import adminRouter from "./routes/adminRoute.js"
@@ -15,7 +15,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors("https://apohealthfrontend-az3supp4y-shubhams-projects-77fce6c4.vercel.app/login"));
+app.use(cors())
 
 // api endpoints
 app.use("/api/user", userRouter)
